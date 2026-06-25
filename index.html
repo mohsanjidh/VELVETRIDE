@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VelvetRide Rentals – Drive in Pure Luxury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="preloader-active">
+
+  <!-- ─── Preloader ───────────────────────────────────────────────── -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <svg viewBox="0 0 1080 1920" class="preloader-svg">
+          <!-- Ground Line -->
+          <line class="car-ground" x1="150" y1="1060" x2="930" y2="1060" />
+          
+          <!-- 9 Radial Dash Lines (Gauge state, morphing to Car) -->
+          <path class="preloader-dash dash-1" d="M 490 960 C 490 960 490 960 465 960" />
+          <path class="preloader-dash dash-2" d="M 492.9 930.7 C 492.9 930.7 492.9 930.7 468.4 925.9" />
+          <path class="preloader-dash dash-3" d="M 501.4 902.6 C 501.4 902.6 501.4 902.6 478.3 893.0" />
+          <path class="preloader-dash dash-4" d="M 515.3 876.7 C 515.3 876.7 515.3 876.7 494.5 862.8" />
+          <path class="preloader-dash dash-5" d="M 533.9 853.9 C 533.9 853.9 533.9 853.9 516.3 836.3" />
+          <path class="preloader-dash dash-6" d="M 556.7 835.3 C 556.7 835.3 556.7 835.3 542.8 814.5" />
+          <path class="preloader-dash dash-7" d="M 582.6 821.4 C 582.6 821.4 582.6 821.4 573.0 798.3" />
+          <path class="preloader-dash dash-8" d="M 610.7 812.9 C 610.7 812.9 610.7 812.9 605.9 788.4" />
+          <path class="preloader-dash dash-9" d="M 640 810 C 640 810 640 810 640 785" />
+          
+          <!-- Green character line / needle -->
+          <path class="preloader-needle" d="M 640 960 C 640 960 640 750 640 750" />
+          
+          <!-- Front Wheel Group -->
+          <g class="wheel-group wheel-group-l">
+            <circle cx="0" cy="0" r="40" class="wheel-rim" />
+            <g class="spokes">
+              <line x1="0" y1="0" x2="0" y2="-40" />
+              <line x1="0" y1="0" x2="23.5" y2="-32.4" />
+              <line x1="0" y1="0" x2="38" y2="-12.4" />
+              <line x1="0" y1="0" x2="38" y2="12.4" />
+              <line x1="0" y1="0" x2="23.5" y2="32.4" />
+              <line x1="0" y1="0" x2="0" y2="40" />
+              <line x1="0" y1="0" x2="-23.5" y2="32.4" />
+              <line x1="0" y1="0" x2="-38" y2="12.4" />
+              <line x1="0" y1="0" x2="-38" y2="-12.4" />
+              <line x1="0" y1="0" x2="-23.5" y2="-32.4" />
+              <circle cx="0" cy="0" r="8" class="wheel-hub" />
+            </g>
+          </g>
+          
+          <!-- Rear Wheel Group -->
+          <g class="wheel-group wheel-group-r">
+            <circle cx="0" cy="0" r="40" class="wheel-rim" />
+            <g class="spokes">
+              <line x1="0" y1="0" x2="0" y2="-40" />
+              <line x1="0" y1="0" x2="23.5" y2="-32.4" />
+              <line x1="0" y1="0" x2="38" y2="-12.4" />
+              <line x1="0" y1="0" x2="38" y2="12.4" />
+              <line x1="0" y1="0" x2="23.5" y2="32.4" />
+              <line x1="0" y1="0" x2="0" y2="40" />
+              <line x1="0" y1="0" x2="-23.5" y2="32.4" />
+              <line x1="0" y1="0" x2="-38" y2="12.4" />
+              <line x1="0" y1="0" x2="-38" y2="-12.4" />
+              <line x1="0" y1="0" x2="-23.5" y2="-32.4" />
+              <circle cx="0" cy="0" r="8" class="wheel-hub" />
+            </g>
+          </g>
+          
+          <!-- Typography Brand Reveal -->
+          <g class="brand-text-group">
+            <text text-anchor="middle" class="brand-text letter letter-v" y="1150" x="250">V</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="315">E</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="380">L</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="445">V</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="510">E</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="575">T</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="1150" x="640">R</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="1150" x="705">I</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="1150" x="770">D</text>
+            <text text-anchor="middle" class="brand-text letter letter-e letter-ride" y="1150" x="835">E</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Inline Preloader Logic & Timeline Control
+    (function() {
+      const preloader = document.getElementById('preloader');
+      const dashes = [
+        document.querySelector('.dash-1'),
+        document.querySelector('.dash-2'),
+        document.querySelector('.dash-3'),
+        document.querySelector('.dash-4'),
+        document.querySelector('.dash-5'),
+        document.querySelector('.dash-6'),
+        document.querySelector('.dash-7'),
+        document.querySelector('.dash-8'),
+        document.querySelector('.dash-9')
+      ];
+
+      // Dash 1 is lit immediately
+      if (dashes[0]) dashes[0].classList.add('lit');
+
+      // 0.5s: Start needle sweep (rev)
+      setTimeout(() => {
+        const needle = document.querySelector('.preloader-needle');
+        if (needle) {
+          needle.classList.add('revving');
+        }
+        
+        // Light up dashes 2 to 9 sequentially over 0.4s
+        const dashTiming = [50, 100, 150, 200, 250, 300, 350, 400]; // milliseconds offset from 0.5s
+        dashTiming.forEach((delay, idx) => {
+          setTimeout(() => {
+            if (dashes[idx + 1]) dashes[idx + 1].classList.add('lit');
+          }, delay);
+        });
+      }, 500);
+
+      // Helper for path coordinate interpolation (morphing)
+      function interpolate(startArr, endArr, t) {
+        return startArr.map((startVal, index) => startVal + t * (endArr[index] - startVal));
+      }
+
+      function formatPath(arr) {
+        return `M ${arr[0].toFixed(1)} ${arr[1].toFixed(1)} C ${arr[2].toFixed(1)} ${arr[3].toFixed(1)} ${arr[4].toFixed(1)} ${arr[5].toFixed(1)} ${arr[6].toFixed(1)} ${arr[7].toFixed(1)}`;
+      }
+
+      // Morphing execution starting at 1.0s
+      setTimeout(() => {
+        if (preloader) {
+          preloader.classList.add('state-morph');
+        }
+        
+        // JS-based morphing engine for maximum compatibility
+        const startPaths = [
+          [490, 960, 490, 960, 490, 960, 465, 960],
+          [492.9, 930.7, 492.9, 930.7, 492.9, 930.7, 468.4, 925.9],
+          [501.4, 902.6, 501.4, 902.6, 501.4, 902.6, 478.3, 893.0],
+          [515.3, 876.7, 515.3, 876.7, 515.3, 876.7, 494.5, 862.8],
+          [533.9, 853.9, 533.9, 853.9, 533.9, 853.9, 516.3, 836.3],
+          [556.7, 835.3, 556.7, 835.3, 556.7, 835.3, 542.8, 814.5],
+          [582.6, 821.4, 582.6, 821.4, 582.6, 821.4, 573.0, 798.3],
+          [610.7, 812.9, 610.7, 812.9, 610.7, 812.9, 605.9, 788.4],
+          [640, 810, 640, 810, 640, 810, 640, 785]
+        ];
+        
+        const endPaths = [
+          [220, 1040, 220, 1040, 240, 1055, 270, 1055],
+          [220, 1040, 220, 1030, 235, 1005, 275, 1005],
+          [275, 1005, 310, 1000, 360, 990, 400, 970],
+          [400, 970, 430, 930, 460, 900, 510, 890],
+          [510, 890, 560, 880, 630, 890, 680, 915],
+          [680, 915, 720, 935, 760, 970, 780, 990],
+          [770, 990, 770, 955, 815, 955, 815, 970],
+          [815, 970, 825, 995, 815, 1055, 775, 1055],
+          [270, 1055, 300, 1055, 740, 1055, 775, 1055]
+        ];
+        
+        const needleStart = [640, 960, 640, 960, 745, 778, 745, 778];
+        const needleEnd = [420, 1010, 420, 1010, 660, 1010, 660, 1010];
+        
+        const pathElements = dashes;
+        const needleElement = document.querySelector('.preloader-needle');
+        
+        const durationMs = 1000;
+        const startTime = performance.now();
+        
+        function step(timestamp) {
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / durationMs, 1);
+          
+          // Easing: easeInOutCubic
+          const ease = progress < 0.5 
+            ? 4 * progress * progress * progress 
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+          
+          // Morph dashes
+          pathElements.forEach((el, i) => {
+            if (el) {
+              const coords = interpolate(startPaths[i], endPaths[i], ease);
+              el.setAttribute('d', formatPath(coords));
+            }
+          });
+          
+          // Morph needle
+          if (needleElement) {
+            const coords = interpolate(needleStart, needleEnd, ease);
+            needleElement.setAttribute('d', formatPath(coords));
+          }
+          
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        }
+        
+        requestAnimationFrame(step);
+      }, 1000);
+
+      // 2.0s: Brand Reveal starts
+      setTimeout(() => {
+        const letterV = document.querySelector('.letter-v');
+        const letterE = document.querySelector('.letter-e');
+        if (letterV) letterV.classList.add('active');
+        if (letterE) letterE.classList.add('active');
+      }, 2000);
+
+      // 2.3s: Inner letters snap in
+      setTimeout(() => {
+        document.querySelectorAll('.letter-inner').forEach(el => {
+          el.classList.add('active');
+        });
+      }, 2300);
+
+      // 3.3s: Fade-out transition starts (1s hold)
+      setTimeout(() => {
+        if (preloader) {
+          preloader.classList.add('fade-out');
+        }
+        document.body.classList.remove('preloader-active');
+        
+        // Clean up the DOM after fade-out transition completes
+        setTimeout(() => {
+          if (preloader) preloader.remove();
+        }, 800);
+      }, 3300);
+
+    })();
+  </script>
+
+  <!-- ─── Mobile Menu ─────────────────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobile()">✕</button>
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="fleet.html" onclick="closeMobile()">Fleet</a>
+    <a href="services.html" onclick="closeMobile()">Services</a>
+    <a href="about.html" onclick="closeMobile()">About</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-name">VELVET<span>RIDE</span></div>
+        <div class="nav-logo-tag">Luxury Car Rentals · Kerala</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta btn-primary"><span>Book Now</span></a>
+      </div>
+      <div class="nav-hamburger" onclick="openMobile()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>Premium Car Rental</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="line1">Drive Beyond</span>
+          <span class="line2">Ordinary.</span>
+        </h1>
+        <p class="hero-subtitle">All kinds of luxury, modified, imported, and normal cars available for hourly rentals.
+          Flexible 8-hour, 12-hour, and 24-hour packages across Kerala.</p>
+        <div class="hero-actions">
+          <a href="fleet.html" class="btn-gold">Explore Our Fleet</a>
+          <a href="contact.html" class="btn-outline">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="container">
+        <div class="hero-stat" style="--i:0">
+          <div class="hero-stat-num">100+</div>
+          <div class="hero-stat-label">Premium Vehicles</div>
+        </div>
+        <div class="hero-stat" style="--i:1">
+          <div class="hero-stat-num">10+</div>
+          <div class="hero-stat-label">Cities Covered</div>
+        </div>
+        <div class="hero-stat" style="--i:2">
+          <div class="hero-stat-num">1000+</div>
+          <div class="hero-stat-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+  <div class="car-strip">
+    <div class="car-strip-inner">
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Range Rover</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Audi A6 Matrix</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>BMW 5 Series</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Contessa</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>BMW M5</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Volvo S90</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Defender</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Porsche Macan</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Porsche Cayenne</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Porsche Panamera</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Range Rover</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Audi A6 Matrix</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>BMW 5 Series</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Contessa</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>BMW M5</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Volvo S90</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Defender</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Porsche Macan</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Porsche Cayenne</div>
+      <div class="car-strip-item"><span class="car-strip-dot"></span>Porsche Panamera</div>
+    </div>
+  </div>
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">Top Picks</div>
+          <h2 class="section-title">Our <span>Signature</span> Fleet</h2>
+        </div>
+        <a href="fleet.html" class="btn-outline">View All Cars →</a>
+      </div>
+      <div class="featured-grid" id="featuredGrid">
+        <!-- Featured cars will be dynamically loaded here by JavaScript -->
+      </div>
+    </div>
+  </section>
+  <section class="experience-section">
+    <div class="experience-bg"></div>
+    <div class="container">
+      <div class="experience-content">
+        <div>
+          <div class="section-label reveal">Why VelvetRide</div>
+          <h2 class="section-title reveal delay-1">The <span>Velvet</span><br>Experience</h2>
+          <div class="gold-line reveal delay-2"></div>
+          <div class="exp-features">
+            <div class="exp-feature reveal delay-1">
+              <div class="exp-icon">🔑</div>
+              <div>
+                <div class="exp-feature-title">Hassle-Free Booking</div>
+                <div class="exp-feature-desc">Book in minutes via WhatsApp or our enquiry form. Instant confirmation
+                  with complete transparency.</div>
+              </div>
+            </div>
+            <div class="exp-feature reveal delay-2">
+              <div class="exp-icon">🛡️</div>
+              <div>
+                <div class="exp-feature-title">Fully Insured & Sanitized</div>
+                <div class="exp-feature-desc">Every vehicle is comprehensively insured, GPS-tracked, and professionally
+                  sanitized before delivery.</div>
+              </div>
+            </div>
+            <div class="exp-feature reveal delay-3">
+              <div class="exp-icon">📍</div>
+              <div>
+                <div class="exp-feature-title">Doorstep Delivery</div>
+                <div class="exp-feature-desc">We deliver and collect the car at your preferred location — hotel,
+                  airport, or residence.</div>
+              </div>
+            </div>
+            <div class="exp-feature reveal delay-4">
+              <div class="exp-icon">📞</div>
+              <div>
+                <div class="exp-feature-title">24/7 Concierge Support</div>
+                <div class="exp-feature-desc">Round-the-clock assistance via WhatsApp, call, or email for any queries or
+                  roadside help.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-visual reveal-right">
+          <img
+            src="https://res.cloudinary.com/dcjd1yqrg/image/upload/q_auto/f_auto/v1779650815/b20d3bc6-7324-4563-8935-1b55f79bccf8.png"
+            alt="Luxury Experience" class="exp-main-img" loading="lazy">
+          <div class="exp-badge-float">
+            <div class="exp-badge-float-num">5★</div>
+            <div class="exp-badge-float-text">Average Rating</div>
+          </div>
+          <div class="exp-badge-float2">
+            <div style="font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)">
+              Trusted by</div>
+            <div
+              style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--gold-light)">
+              1000+</div>
+            <div style="font-size:0.6rem;color:rgba(255,255,255,0.5)">Clients Statewide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="why-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">The VelvetRide Standard</div>
+        <h2 class="section-title">Why Clients <span>Choose Us</span></h2>
+      </div>
+      <div class="why-grid reveal delay-1">
+        <div class="why-item">
+          <div class="why-number">01</div>
+          <div class="why-title">Curated Premium Fleet</div>
+          <p class="why-desc">Every vehicle in our fleet is hand-selected, meticulously maintained, and regularly
+            upgraded. We never compromise on quality.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-number">02</div>
+          <div class="why-title">Transparent Pricing</div>
+          <p class="why-desc">No hidden charges. What you see is what you pay. Our inclusive rates cover insurance, GST,
+            and basic roadside assistance.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-number">03</div>
+          <div class="why-title">Flexible Durations</div>
+          <p class="why-desc">Rent for 4 hours, 8 hours, 12 hours, or a full 24-hour day. We accommodate all short-term
+            durations with competitive hourly rates.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-number">04</div>
+          <div class="why-title">All Budget Ranges</div>
+          <p class="why-desc">From budget sedans to ultra-luxury supercars — every wallet finds its perfect ride in our
+            diverse, well-maintained collection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo-name"
+            style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;letter-spacing:0.08em">
+            VELVET<span style="color:var(--gold)">RIDE</span></div>
+          <p>Velvet Ride Rentals is committed to delivering a refined luxury travel experience with professionalism, discretion, safety, and exceptional service standards across every journey.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📘</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">🐦</a>
+            <a href="https://wa.me/918921331962" class="social-btn">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fleet.html">Fleet</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Enquiry</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="fleet.html">Luxury Cars</a></li>
+            <li><a href="fleet.html">Modified Cars</a></li>
+            <li><a href="fleet.html">Imported Cars</a></li>
+            <li><a href="fleet.html">Budget Cars</a></li>
+            <li><a href="services.html">Special Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Follow Us on Instagram</h4>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.8rem">Stay inspired with our latest fleet
+            drops, events &amp; exclusive offers.</p>
+          <a href="https://www.instagram.com/velvetride_rentals_/" target="_blank" rel="noopener noreferrer" class="footer-insta-btn">📸
+            Follow Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2025 VelvetRide Rentals. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#" onclick="showLegal('privacy')">Privacy Policy</a>
+          <a href="#" onclick="showLegal('terms')">Terms & Conditions</a>
+          <a href="#" onclick="showLegal('rental')">Rental Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Legal Modal ─────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="legalModal">
+    <div class="modal" style="max-width:600px;max-height:80vh;overflow-y:auto">
+      <button class="modal-close" onclick="closeLegal()">✕</button>
+      <div id="legalContent"></div>
+    </div>
+  </div>
+
+  <!-- ─── Car Modal ───────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="carModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img id="modalImg" src="" alt="" class="modal-car-img">
+      <div class="modal-car-name" id="modalName"></div>
+      <div class="modal-car-tag" id="modalTag"></div>
+      <div class="modal-specs" id="modalSpecs"></div>
+      <div class="modal-pricing" id="modalPricing"></div>
+      <div class="modal-actions">
+        <a href="contact.html" class="btn-primary" onclick="closeModal()"><span>📋 Send Enquiry</span></a>
+        <a href="https://wa.me/918921331962" class="btn-gold" target="_blank">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Toast ───────────────────────────────────────────────────── -->
+  <div class="toast" id="toast">
+    <span class="toast-icon" id="toastIcon">✅</span>
+    <span id="toastMsg">Done!</span>
+  </div>
+
+  <!-- ─── Floating WhatsApp ────────────────────────────────────────── -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+    <a href="https://wa.me/918921331962?text=Hi%20Velvetride%20Rentals,%20I%20am%20interested%20in%20browsing%20your%20fleet%20and%20making%20a%20booking!"
+      target="_blank" class="whatsapp-btn" rel="noopener">
+      <div class="wa-ring"></div>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- ─── JavaScript ───────────────────────────────────────────────── -->
+  <script src="script.js"></script>
+</body>
+
+</html>

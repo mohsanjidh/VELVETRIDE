@@ -1,0 +1,268 @@
+{
+  "vehicles": [
+    {
+      "id": "bentley-gt",
+      "name": "Bentley Continental GT",
+      "category": "luxury",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&q=80",
+      "pricing": {
+        "8hr": 7500,
+        "12hr": 13000,
+        "24hr": 22000
+      }
+    },
+    {
+      "id": "bmw-m3",
+      "name": "BMW M3 Competition",
+      "category": "luxury",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80",
+      "pricing": {
+        "8hr": 4000,
+        "12hr": 7000,
+        "24hr": 12000
+      }
+    },
+    {
+      "id": "rolls-ghost",
+      "name": "Rolls-Royce Ghost",
+      "category": "luxury",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=600&q=80",
+      "pricing": {
+        "8hr": 8000,
+        "12hr": 15000,
+        "24hr": 25000
+      }
+    },
+    {
+      "id": "lamborghini-huracan",
+      "name": "Lamborghini Huracán",
+      "category": "luxury",
+      "location": "Ernakulam",
+      "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80",
+      "pricing": {
+        "8hr": 12000,
+        "12hr": 20000,
+        "24hr": 35000
+      }
+    },
+    {
+      "id": "ferrari-roma",
+      "name": "Ferrari Roma",
+      "category": "luxury",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600&q=80",
+      "pricing": {
+        "8hr": 10000,
+        "12hr": 18000,
+        "24hr": 30000
+      }
+    },
+    {
+      "id": "porsche-911",
+      "name": "Porsche 911 Carrera",
+      "category": "luxury",
+      "location": "Trivandrum",
+      "image": "https://images.unsplash.com/photo-1617531653332-bd46c16f7d71?w=600&q=80",
+      "pricing": {
+        "8hr": 5500,
+        "12hr": 9500,
+        "24hr": 16000
+      }
+    },
+    {
+      "id": "gtr-tuned",
+      "name": "Nissan GT-R (Tuned)",
+      "category": "modified",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1542362567-b07e54358753?w=600&q=80",
+      "pricing": {
+        "8hr": 5000,
+        "12hr": 9000,
+        "24hr": 15000
+      }
+    },
+    {
+      "id": "supra-modified",
+      "name": "Toyota Supra (Modified)",
+      "category": "modified",
+      "location": "Ernakulam",
+      "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&q=80",
+      "pricing": {
+        "8hr": 4500,
+        "12hr": 8000,
+        "24hr": 13000
+      }
+    },
+    {
+      "id": "audi-rs6",
+      "name": "Audi RS6 Avant",
+      "category": "modified",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80",
+      "pricing": {
+        "8hr": 6000,
+        "12hr": 11000,
+        "24hr": 18000
+      }
+    },
+    {
+      "id": "range-rover",
+      "name": "Range Rover Sport",
+      "category": "imported",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 5500,
+        "12hr": 10000,
+        "24hr": 17000
+      }
+    },
+    {
+      "id": "gwagon",
+      "name": "G-wagon",
+      "category": "imported",
+      "location": "Kalamassery",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 6000,
+        "12hr": 11000,
+        "24hr": 18000
+      }
+    },
+    {
+      "id": "volvo-s90",
+      "name": "Volvo S90",
+      "category": "imported",
+      "location": "Ernakulam",
+      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80",
+      "pricing": {
+        "8hr": 4000,
+        "12hr": 7500,
+        "24hr": 13000
+      }
+    },
+    {
+      "id": "audi-a6",
+      "name": "Audi A6 Matrix",
+      "category": "imported",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80",
+      "pricing": {
+        "8hr": 3500,
+        "12hr": 6500,
+        "24hr": 11000
+      }
+    },
+    {
+      "id": "innova-crysta",
+      "name": "Toyota Innova Crysta",
+      "category": "budget",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80",
+      "pricing": {
+        "8hr": 1500,
+        "12hr": 2500,
+        "24hr": 3500
+      }
+    },
+    {
+      "id": "mahindra-xuv",
+      "name": "Mahindra XUV700",
+      "category": "budget",
+      "location": "Trivandrum",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 1800,
+        "12hr": 3000,
+        "24hr": 4200
+      }
+    },
+    {
+      "id": "hyundai-creta",
+      "name": "Hyundai Creta",
+      "category": "budget",
+      "location": "Ernakulam",
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80",
+      "pricing": {
+        "8hr": 1200,
+        "12hr": 2000,
+        "24hr": 2800
+      }
+    },
+    {
+      "id": "maruti-swift",
+      "name": "Maruti Swift",
+      "category": "budget",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80",
+      "pricing": {
+        "8hr": 800,
+        "12hr": 1200,
+        "24hr": 1600
+      }
+    },
+    {
+      "id": "tata-nexon",
+      "name": "Tata Nexon EV",
+      "category": "budget",
+      "location": "Trivandrum",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 1400,
+        "12hr": 2300,
+        "24hr": 3200
+      }
+    },
+    {
+      "id": "defender",
+      "name": "Defender Black",
+      "category": "imported",
+      "location": "Kalamassery",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 5000,
+        "12hr": 9000,
+        "24hr": 15000
+      }
+    },
+    {
+      "id": "porsche-macan",
+      "name": "Porsche Macan",
+      "category": "luxury",
+      "location": "Ernakulam",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 6500,
+        "12hr": 12000,
+        "24hr": 20000
+      }
+    },
+    {
+      "id": "porsche-cayenne",
+      "name": "Porsche Cayenne",
+      "category": "luxury",
+      "location": "Kochi",
+      "image": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80",
+      "pricing": {
+        "8hr": 7000,
+        "12hr": 13000,
+        "24hr": 22000
+      }
+    },
+    {
+      "id": "porsche-panamera",
+      "name": "Porsche Panamera",
+      "category": "luxury",
+      "location": "Trivandrum",
+      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80",
+      "pricing": {
+        "8hr": 6000,
+        "12hr": 11000,
+        "24hr": 18000
+      }
+    }
+  ]
+}
