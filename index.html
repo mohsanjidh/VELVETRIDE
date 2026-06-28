@@ -16,74 +16,42 @@
 
   <!-- ─── Preloader ───────────────────────────────────────────────── -->
   <div id="preloader">
+    <!-- Audio Elements for Preloader (Graceful silent degradation handled in JS) -->
+    <audio id="preloader-audio-rev" src="assets/rev.mp3" preload="auto"></audio>
+    <audio id="preloader-audio-boom" src="assets/boom.mp3" preload="auto"></audio>
+    
     <div class="preloader-content">
       <div class="preloader-visual">
         <svg viewBox="0 0 1080 1920" class="preloader-svg">
-          <!-- Ground Line -->
-          <line class="car-ground" x1="150" y1="1060" x2="930" y2="1060" />
+          <!-- 9 Radial Dash Lines for Tachometer Arc -->
+          <path class="preloader-dash dash-1" d="M 349.5 1070.0 L 323.5 1085.0" />
+          <path class="preloader-dash dash-2" d="M 324.2 1002.9 L 294.8 1008.8" />
+          <path class="preloader-dash dash-3" d="M 321.9 931.3 L 292.1 927.4" />
+          <path class="preloader-dash dash-4" d="M 342.7 862.7 L 315.8 849.4" />
+          <path class="preloader-dash dash-5" d="M 384.4 804.4 L 363.2 783.2" />
+          <path class="preloader-dash dash-6" d="M 442.7 762.7 L 429.4 735.8" />
+          <path class="preloader-dash dash-7" d="M 511.3 741.9 L 507.4 712.1" />
+          <path class="preloader-dash dash-8" d="M 582.9 744.2 L 588.8 714.8" />
+          <path class="preloader-dash dash-9" d="M 650.0 769.5 L 665.0 743.5" />
           
-          <!-- 9 Radial Dash Lines (Gauge state, morphing to Car) -->
-          <path class="preloader-dash dash-1" d="M 490 960 C 490 960 490 960 465 960" />
-          <path class="preloader-dash dash-2" d="M 492.9 930.7 C 492.9 930.7 492.9 930.7 468.4 925.9" />
-          <path class="preloader-dash dash-3" d="M 501.4 902.6 C 501.4 902.6 501.4 902.6 478.3 893.0" />
-          <path class="preloader-dash dash-4" d="M 515.3 876.7 C 515.3 876.7 515.3 876.7 494.5 862.8" />
-          <path class="preloader-dash dash-5" d="M 533.9 853.9 C 533.9 853.9 533.9 853.9 516.3 836.3" />
-          <path class="preloader-dash dash-6" d="M 556.7 835.3 C 556.7 835.3 556.7 835.3 542.8 814.5" />
-          <path class="preloader-dash dash-7" d="M 582.6 821.4 C 582.6 821.4 582.6 821.4 573.0 798.3" />
-          <path class="preloader-dash dash-8" d="M 610.7 812.9 C 610.7 812.9 610.7 812.9 605.9 788.4" />
-          <path class="preloader-dash dash-9" d="M 640 810 C 640 810 640 810 640 785" />
+          <!-- Gold Needle -->
+          <path class="preloader-needle" d="M 540 960 L 540 750" />
           
-          <!-- Green character line / needle -->
-          <path class="preloader-needle" d="M 640 960 C 640 960 640 750 640 750" />
-          
-          <!-- Front Wheel Group -->
-          <g class="wheel-group wheel-group-l">
-            <circle cx="0" cy="0" r="40" class="wheel-rim" />
-            <g class="spokes">
-              <line x1="0" y1="0" x2="0" y2="-40" />
-              <line x1="0" y1="0" x2="23.5" y2="-32.4" />
-              <line x1="0" y1="0" x2="38" y2="-12.4" />
-              <line x1="0" y1="0" x2="38" y2="12.4" />
-              <line x1="0" y1="0" x2="23.5" y2="32.4" />
-              <line x1="0" y1="0" x2="0" y2="40" />
-              <line x1="0" y1="0" x2="-23.5" y2="32.4" />
-              <line x1="0" y1="0" x2="-38" y2="12.4" />
-              <line x1="0" y1="0" x2="-38" y2="-12.4" />
-              <line x1="0" y1="0" x2="-23.5" y2="-32.4" />
-              <circle cx="0" cy="0" r="8" class="wheel-hub" />
-            </g>
-          </g>
-          
-          <!-- Rear Wheel Group -->
-          <g class="wheel-group wheel-group-r">
-            <circle cx="0" cy="0" r="40" class="wheel-rim" />
-            <g class="spokes">
-              <line x1="0" y1="0" x2="0" y2="-40" />
-              <line x1="0" y1="0" x2="23.5" y2="-32.4" />
-              <line x1="0" y1="0" x2="38" y2="-12.4" />
-              <line x1="0" y1="0" x2="38" y2="12.4" />
-              <line x1="0" y1="0" x2="23.5" y2="32.4" />
-              <line x1="0" y1="0" x2="0" y2="40" />
-              <line x1="0" y1="0" x2="-23.5" y2="32.4" />
-              <line x1="0" y1="0" x2="-38" y2="12.4" />
-              <line x1="0" y1="0" x2="-38" y2="-12.4" />
-              <line x1="0" y1="0" x2="-23.5" y2="-32.4" />
-              <circle cx="0" cy="0" r="8" class="wheel-hub" />
-            </g>
-          </g>
+          <!-- Needle Pivot (Hollow circle) -->
+          <circle class="preloader-pivot" cx="540" cy="960" r="12" />
           
           <!-- Typography Brand Reveal -->
           <g class="brand-text-group">
-            <text text-anchor="middle" class="brand-text letter letter-v" y="1150" x="250">V</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="315">E</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="380">L</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="445">V</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="510">E</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner" y="1150" x="575">T</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="1150" x="640">R</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="1150" x="705">I</text>
-            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="1150" x="770">D</text>
-            <text text-anchor="middle" class="brand-text letter letter-e letter-ride" y="1150" x="835">E</text>
+            <text text-anchor="middle" class="brand-text letter letter-v" y="980" x="247.5">V</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="980" x="312.5">E</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="980" x="377.5">L</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="980" x="442.5">V</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="980" x="507.5">E</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner" y="980" x="572.5">T</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="980" x="637.5">R</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="980" x="702.5">I</text>
+            <text text-anchor="middle" class="brand-text letter letter-inner letter-ride" y="980" x="767.5">D</text>
+            <text text-anchor="middle" class="brand-text letter letter-e letter-ride" y="980" x="832.5">E</text>
           </g>
         </svg>
       </div>
@@ -94,6 +62,9 @@
     // Inline Preloader Logic & Timeline Control
     (function() {
       const preloader = document.getElementById('preloader');
+      const audioRev = document.getElementById('preloader-audio-rev');
+      const audioBoom = document.getElementById('preloader-audio-boom');
+      
       const dashes = [
         document.querySelector('.dash-1'),
         document.querySelector('.dash-2'),
@@ -106,121 +77,57 @@
         document.querySelector('.dash-9')
       ];
 
-      // Dash 1 is lit immediately
-      if (dashes[0]) dashes[0].classList.add('lit');
-
-      // 0.5s: Start needle sweep (rev)
-      setTimeout(() => {
-        const needle = document.querySelector('.preloader-needle');
-        if (needle) {
-          needle.classList.add('revving');
+      function playSound(audio) {
+        if (audio) {
+          audio.currentTime = 0;
+          audio.play().catch(err => {
+            console.warn('Audio play blocked or unavailable:', err.message);
+          });
         }
+      }
+
+      // Phase 1: Speedometer Rev (0:00 - 0:01.5)
+      // At 0.5s, start the needle sweep and sequential dash lighting
+      setTimeout(() => {
+        if (preloader) {
+          preloader.classList.add('state-revving');
+        }
+        playSound(audioRev);
         
-        // Light up dashes 2 to 9 sequentially over 0.4s
-        const dashTiming = [50, 100, 150, 200, 250, 300, 350, 400]; // milliseconds offset from 0.5s
-        dashTiming.forEach((delay, idx) => {
+        // 9 dashes light up sequentially in a rapid clockwise chain reaction over 1.0s
+        const dashInterval = 1000 / 8; // 125ms interval
+        dashes.forEach((dash, idx) => {
           setTimeout(() => {
-            if (dashes[idx + 1]) dashes[idx + 1].classList.add('lit');
-          }, delay);
+            if (dash) dash.classList.add('lit');
+          }, idx * dashInterval);
         });
       }, 500);
 
-      // Helper for path coordinate interpolation (morphing)
-      function interpolate(startArr, endArr, t) {
-        return startArr.map((startVal, index) => startVal + t * (endArr[index] - startVal));
-      }
-
-      function formatPath(arr) {
-        return `M ${arr[0].toFixed(1)} ${arr[1].toFixed(1)} C ${arr[2].toFixed(1)} ${arr[3].toFixed(1)} ${arr[4].toFixed(1)} ${arr[5].toFixed(1)} ${arr[6].toFixed(1)} ${arr[7].toFixed(1)}`;
-      }
-
-      // Morphing execution starting at 1.0s
+      // Phase 2: Direct Logo Transition (0:01.5 - 0:02.0)
+      // Speedometer elements dissolve/fade outward scaling up, brand text scales up from center
       setTimeout(() => {
         if (preloader) {
-          preloader.classList.add('state-morph');
+          preloader.classList.add('state-transition');
         }
-        
-        // JS-based morphing engine for maximum compatibility
-        const startPaths = [
-          [490, 960, 490, 960, 490, 960, 465, 960],
-          [492.9, 930.7, 492.9, 930.7, 492.9, 930.7, 468.4, 925.9],
-          [501.4, 902.6, 501.4, 902.6, 501.4, 902.6, 478.3, 893.0],
-          [515.3, 876.7, 515.3, 876.7, 515.3, 876.7, 494.5, 862.8],
-          [533.9, 853.9, 533.9, 853.9, 533.9, 853.9, 516.3, 836.3],
-          [556.7, 835.3, 556.7, 835.3, 556.7, 835.3, 542.8, 814.5],
-          [582.6, 821.4, 582.6, 821.4, 582.6, 821.4, 573.0, 798.3],
-          [610.7, 812.9, 610.7, 812.9, 610.7, 812.9, 605.9, 788.4],
-          [640, 810, 640, 810, 640, 810, 640, 785]
-        ];
-        
-        const endPaths = [
-          [220, 1040, 220, 1040, 240, 1055, 270, 1055],
-          [220, 1040, 220, 1030, 235, 1005, 275, 1005],
-          [275, 1005, 310, 1000, 360, 990, 400, 970],
-          [400, 970, 430, 930, 460, 900, 510, 890],
-          [510, 890, 560, 880, 630, 890, 680, 915],
-          [680, 915, 720, 935, 760, 970, 780, 990],
-          [770, 990, 770, 955, 815, 955, 815, 970],
-          [815, 970, 825, 995, 815, 1055, 775, 1055],
-          [270, 1055, 300, 1055, 740, 1055, 775, 1055]
-        ];
-        
-        const needleStart = [640, 960, 640, 960, 745, 778, 745, 778];
-        const needleEnd = [420, 1010, 420, 1010, 660, 1010, 660, 1010];
-        
-        const pathElements = dashes;
-        const needleElement = document.querySelector('.preloader-needle');
-        
-        const durationMs = 1000;
-        const startTime = performance.now();
-        
-        function step(timestamp) {
-          const elapsed = timestamp - startTime;
-          const progress = Math.min(elapsed / durationMs, 1);
-          
-          // Easing: easeInOutCubic
-          const ease = progress < 0.5 
-            ? 4 * progress * progress * progress 
-            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-          
-          // Morph dashes
-          pathElements.forEach((el, i) => {
-            if (el) {
-              const coords = interpolate(startPaths[i], endPaths[i], ease);
-              el.setAttribute('d', formatPath(coords));
-            }
-          });
-          
-          // Morph needle
-          if (needleElement) {
-            const coords = interpolate(needleStart, needleEnd, ease);
-            needleElement.setAttribute('d', formatPath(coords));
-          }
-          
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          }
-        }
-        
-        requestAnimationFrame(step);
-      }, 1000);
+      }, 1500);
 
-      // 2.0s: Brand Reveal starts
+      // Phase 3: Symmetrical Brand Typography (0:02.0 - 0:04.0)
+      // 2.0s: Outer letters ("V" and "E") materialize
       setTimeout(() => {
-        const letterV = document.querySelector('.letter-v');
-        const letterE = document.querySelector('.letter-e');
-        if (letterV) letterV.classList.add('active');
-        if (letterE) letterE.classList.add('active');
+        if (preloader) {
+          preloader.classList.add('state-reveal-outer');
+        }
       }, 2000);
 
-      // 2.3s: Inner letters snap in
+      // 2.3s: Inner letters ("ELVETRID") snap into place, deep sub-bass drop sound plays
       setTimeout(() => {
-        document.querySelectorAll('.letter-inner').forEach(el => {
-          el.classList.add('active');
-        });
+        if (preloader) {
+          preloader.classList.add('state-reveal-inner');
+        }
+        playSound(audioBoom);
       }, 2300);
 
-      // 3.3s: Fade-out transition starts (1s hold)
+      // Fade out preloader at 3.3s (1s hold after text resolves)
       setTimeout(() => {
         if (preloader) {
           preloader.classList.add('fade-out');
@@ -232,7 +139,6 @@
           if (preloader) preloader.remove();
         }, 800);
       }, 3300);
-
     })();
   </script>
 
