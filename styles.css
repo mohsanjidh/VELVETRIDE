@@ -1837,6 +1837,90 @@ body::before {
 .toast.show { transform: translateX(-50%) translateY(0); }
 .toast-icon { font-size: 1.1rem; }
 
+/* ─── Success Overlay Modal ─────────────────────────────────────── */
+.success-overlay-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.success-modal-card {
+  background: #0B0B0C;
+  border: 1px solid #634072;
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: modalScaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes modalScaleIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.success-icon {
+  font-size: 2.2rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(201, 160, 90, 0.1);
+  border: 2px solid var(--gold);
+  margin-left: auto;
+  margin-right: auto;
+}
+.success-modal-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.success-modal-card p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+.theme-gold-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.2rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  border: none;
+  color: #0B0B0C;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+  width: 100%;
+}
+.theme-gold-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201, 160, 90, 0.3);
+}
+
 /* ─── Legal Sections ─────────────────────────────────────────────── */
 .legal-section {
   display: none;
