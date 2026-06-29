@@ -279,7 +279,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── Submit Enquiry ────────────────────────────────────────────────
-function submitEnquiry() {
+function submitEnquiry(e) {
+  if (e && typeof e.preventDefault === 'function') {
+    e.preventDefault();
+  }
+
   const name = document.getElementById('fName').value.trim();
   const phone = document.getElementById('fPhone').value.trim();
   const city = document.getElementById('fCity').value;
@@ -306,7 +310,13 @@ function submitEnquiry() {
   const whatsappUrl = `https://wa.me/918921331962?text=${encodedMessage}`;
 
   // Redirect the user directly to WhatsApp in a new tab
-  window.open(whatsappUrl, '_blank');
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+  // Clean form reset lifecycle
+  const formElement = document.getElementById('enquiryForm');
+  if (formElement) {
+    formElement.reset();
+  }
 }
 
 // ── Toast ─────────────────────────────────────────────────────────
