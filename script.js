@@ -312,12 +312,46 @@ function submitEnquiry(e) {
   // Redirect the user directly to WhatsApp in a new tab
   window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
+  // Immediately trigger the custom success modal on the current website tab
+  showSuccessModal();
+
   // Clean form reset lifecycle
   const formElement = document.getElementById('enquiryForm');
   if (formElement) {
     formElement.reset();
   }
 }
+
+// ── Success Modal ──────────────────────────────────────────────────
+function showSuccessModal() {
+  const overlay = document.getElementById('success-overlay');
+  if (overlay) {
+    overlay.style.display = 'flex';
+    void overlay.offsetWidth; // Force layout recalculation/reflow to enable CSS transition
+    overlay.style.opacity = '1';
+  }
+}
+
+function closeSuccessModal() {
+  const overlay = document.getElementById('success-overlay');
+  if (overlay) {
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 300); // Wait for the 0.3s opacity transition to complete
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const successOverlay = document.getElementById('success-overlay');
+  if (successOverlay) {
+    successOverlay.addEventListener('click', e => {
+      if (e.target === e.currentTarget) {
+        closeSuccessModal();
+      }
+    });
+  }
+});
 
 // ── Toast ─────────────────────────────────────────────────────────
 function showToast(msg) {
