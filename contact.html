@@ -85,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="enquiry-form reveal-right">
+        <form class="enquiry-form reveal-right" id="enquiryForm" onsubmit="submitEnquiry(event)">
           <div class="form-title">Send an Enquiry</div>
           <div class="form-grid">
             <div class="form-group">
@@ -142,8 +142,8 @@
               <textarea id="fMsg" rows="4" placeholder="Tell us about your requirements..."></textarea>
             </div>
           </div>
-          <button class="form-submit" onclick="submitEnquiry()">🚀 Send Enquiry</button>
-        </div>
+          <button type="submit" class="form-submit">🚀 Send Enquiry</button>
+        </form>
       </div>
     </div>
   </section>
@@ -154,7 +154,8 @@
           <div class="nav-logo-name"
             style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;letter-spacing:0.08em">
             VELVET<span style="color:var(--gold)">RIDE</span></div>
-          <p>Velvet Ride Rentals is committed to delivering a refined luxury travel experience with professionalism, discretion, safety, and exceptional service standards across every journey.</p>
+          <p>Velvet Ride Rentals is committed to delivering a refined luxury travel experience with professionalism,
+            discretion, safety, and exceptional service standards across every journey.</p>
           <div class="footer-social">
             <a href="#" class="social-btn">📘</a>
             <a href="#" class="social-btn">📸</a>
@@ -187,7 +188,8 @@
           <h4>Follow Us on Instagram</h4>
           <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.8rem">Stay inspired with our latest fleet
             drops, events &amp; exclusive offers.</p>
-          <a href="https://www.instagram.com/velvetride_rentals_/" target="_blank" rel="noopener noreferrer" class="footer-insta-btn">📸
+          <a href="https://www.instagram.com/velvetride_rentals_/" target="_blank" rel="noopener noreferrer"
+            class="footer-insta-btn">📸
             Follow Us</a>
         </div>
       </div>
