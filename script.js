@@ -309,16 +309,19 @@ function submitEnquiry(e) {
   const encodedMessage = encodeURIComponent(messageText);
   const whatsappUrl = `https://wa.me/918921331962?text=${encodedMessage}`;
 
-  // Redirect the user directly to WhatsApp in a new tab
-  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-
-  // Immediately trigger the custom success modal on the current website tab
+  // 1. Instantly inject and launch the visual success modal on the current tab
   showSuccessModal();
 
-  // Clean form reset lifecycle
+  // 2. Clear out ONLY the input form values, keeping the rest of the DOM pristine
   const formElement = document.getElementById('enquiryForm');
   if (formElement) {
     formElement.reset();
+  }
+
+  // 3. Launch WhatsApp securely in a secondary tab layer
+  const whatsappWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  if (!whatsappWindow) {
+    window.location.assign(whatsappUrl);
   }
 }
 
@@ -343,6 +346,11 @@ function closeSuccessModal() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  const enquiryForm = document.getElementById('enquiryForm');
+  if (enquiryForm) {
+    enquiryForm.addEventListener('submit', submitEnquiry);
+  }
+
   const successOverlay = document.getElementById('success-overlay');
   if (successOverlay) {
     successOverlay.addEventListener('click', e => {
@@ -350,6 +358,11 @@ window.addEventListener('DOMContentLoaded', () => {
         closeSuccessModal();
       }
     });
+  }
+
+  const closeOverlayBtn = document.getElementById('close-overlay-btn');
+  if (closeOverlayBtn) {
+    closeOverlayBtn.addEventListener('click', closeSuccessModal);
   }
 });
 
